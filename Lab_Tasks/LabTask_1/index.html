@@ -15,45 +15,160 @@
 
 <body>
     <div class="z-1 position-sticky top-0">
-        <div class="d-flex flex-row align-items-center justify-content-center h-50 nav-top ">
+        <div class="d-flex flex-row align-items-center justify-content-center h-50 nav-top">
             <a class="text-white fs-5" href="">
                 View Spring-Summer 2025 Fabric Guide
             </a>
         </div>
-        <section class="first">
-            <nav
+
+        <div class="desktop-navbar">
+            <navbar
                 class="d-flex flex-row align-items-center justify-content-between position-sticky top-0 pt-1 px-4 navbar">
-                <ul class="d-flex mb-0">
-                    <li class="list-unstyled"><a class="fw-semibold fw-responsive text-decoration-none text-black mx-2"
+                <ul class="d-flex mb-0 p-0">
+                    <li class="list-unstyled"><a class="fw-semibold text-decoration-none text-black mx-2"
                             href="">SHOP</a></li>
-                    <li class="list-unstyled"><a class="fw-semibold fw-responsive text-decoration-none text-black mx-2"
+                    <li class="list-unstyled"><a class="fw-semibold text-decoration-none text-black mx-2"
                             href="">READ</a></li>
-                    <li class="list-unstyled"><a class="fw-semibold fw-responsive text-decoration-none text-black mx-2"
-                            href="">ABOUT US</a></li>
-                    <li class="list-unstyled"><a class="fw-semibold fw-responsive text-decoration-none text-black mx-2"
+                    <li class="list-unstyled"><a class="fw-semibold text-decoration-none text-black mx-2" href="">ABOUT
+                            US</a></li>
+                    <li class="list-unstyled"><a class="fw-semibold text-decoration-none text-black mx-2"
                             href="">STORES</a></li>
                 </ul>
                 <div id="logo">
-                    <img class="my-2 mx-3" src="/Assets/Logo.svg" alt="MyOnlineMeal">
+                    <img class="my-2 mx-3" src="/Assets/Logo.svg" alt="Logo">
                 </div>
                 <ul class="items mb-0">
                     <li class="d-flex flex-row">
                         <button class="border-0 bg-white d-flex flex-row align-items-center my-0 mx-2">
-                            <span class="fw-semibold fw-responsive fs-8">SEARCH</span>
+                            <span class="fw-semibold fs-8">SEARCH</span>
                             <img src="/Assets/magnifier.png" alt="">
                         </button>
                         <button class="border-0 bg-white d-flex flex-row align-items-center my-0 mx-2">
-                            <span class="fw-semibold fw-responsive fs-8">ACCOUNT</span>
+                            <span class="fw-semibold fs-8">ACCOUNT</span>
                             <img src="/Assets/profile.png" alt="">
                         </button>
                         <button class="border-0 bg-white d-flex flex-row align-items-center my-0 mx-2">
-                            <span class="fw-semibold fw-responsive fs-8">CART</span>
+                            <span class="fw-semibold fs-8">CART</span>
                             <img src="/Assets/lock.png" alt="">
                         </button>
                     </li>
                 </ul>
-            </nav>
-        </section>
+            </navbar>
+        </div>
+
+        <div class="mobile-navbar">
+            <navbar
+                class="d-flex flex-row align-items-center justify-content-between position-sticky top-0 pt-1 px-4 navbar">
+                <div class="menu d-flex flex-row align-items-center">
+                    <input type="checkbox" id="menuToggle" class="menu-checkbox">
+
+                    <label for="menuToggle" class="menu-btn">
+                        <div class="bar bar1"></div>
+                        <div class="bar bar2"></div>
+                    </label>
+
+                    <div class="side-menu">
+                        <label for="menuToggle" class="close-btn">&times;</label>
+                        <ul class="menu-items">
+                            <li>
+                                <input type="checkbox" id="toggleDropdown1" class="d-none">
+                                <label for="toggleDropdown1"
+                                    class="dropdown-toggle border-0 bg-white py-2 ps-3 rounded-pill d-inline-flex align-items-center">
+                                    <span class="text-black" >SHOP</span>
+                                    <span class="ps-3">
+                                        <svg class="rotate-icon" width="15" height="10" viewBox="0 0 15 10" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.973 1.21631L7.64018 8.81572C7.56022 8.91167 7.41285 8.91167 7.33289 8.81572L1.00005 1.21631"
+                                                stroke="black" stroke-width="2"></path>
+                                        </svg>
+                                    </span>
+                                </label>
+
+                                <!-- Dropdown1 content -->
+                                <div class="dropdown-menu1">
+                                    <a href="#">Option 1</a>
+                                    <a href="#">Option 2</a>
+                                    <a href="#">Option 3</a>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="toggleDropdown2" class="d-none">
+                                <label for="toggleDropdown2"
+                                    class="dropdown-toggle border-0 bg-white py-2 ps-3 rounded-pill d-inline-flex align-items-center">
+                                    <span class="text-black" >READ</span>
+                                    <span class="ps-3">
+                                        <svg class="rotate-icon" width="15" height="10" viewBox="0 0 15 10" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.973 1.21631L7.64018 8.81572C7.56022 8.91167 7.41285 8.91167 7.33289 8.81572L1.00005 1.21631"
+                                                stroke="black" stroke-width="2"></path>
+                                        </svg>
+                                    </span>
+                                </label>
+
+                                <!-- Dropdown2 content -->
+                                <div class="dropdown-menu2">
+                                    <a href="#">Option 1</a>
+                                    <a href="#">Option 2</a>
+                                    <a href="#">Option 3</a>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="toggleDropdown3" class="d-none">
+                                <label for="toggleDropdown3"
+                                    class="dropdown-toggle border-0 bg-white py-2 ps-3 rounded-pill d-inline-flex align-items-center">
+                                    <span class="text-black" >ABOUT US</span>
+                                    <span class="ps-3">
+                                        <svg class="rotate-icon" width="15" height="10" viewBox="0 0 15 10" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.973 1.21631L7.64018 8.81572C7.56022 8.91167 7.41285 8.91167 7.33289 8.81572L1.00005 1.21631"
+                                                stroke="black" stroke-width="2"></path>
+                                        </svg>
+                                    </span>
+                                </label>
+
+                                <!-- Dropdown3 content -->
+                                <div class="dropdown-menu3">
+                                    <a href="#">Option 1</a>
+                                    <a href="#">Option 2</a>
+                                    <a href="#">Option 3</a>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="border-0 bg-white py-2 px-3 rounded-pill" href="#">STORES</button>
+                            </li>
+                        </ul>
+                        <div class="bar-sep"></div>
+                        <h5 class="fw-semibold" style="color: #157c69;">QUICKLINKS</h5>
+                        <ul class="menu-items">
+                            <li><a href="#">Account</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">FAQ's</a></li>
+                            <li><a href="#">Shipping</a></li>
+                            <li><a href="#">Returns</a></li>
+                        </ul>
+                    </div>
+                    <button class="ms-4 border-0 bg-white d-flex flex-row align-items-center my-0 mx-2">
+                        <img src="/Assets/magnifier.png" alt="">
+                    </button>
+                </div>
+                <div id="logo">
+                    <img class="my-2 mx-3" src="/Assets/Logo.svg" alt="Logo">
+                </div>
+                <ul class="items mb-0">
+                    <li class="d-flex flex-row">
+                        <button class="border-0 bg-white d-flex flex-row align-items-center my-0 mx-2">
+                            <img src="/Assets/profile.png" alt="">
+                        </button>
+                        <button class="border-0 bg-white d-flex flex-row align-items-center my-0 mx-2">
+                            <img src="/Assets/lock.png" alt="">
+                        </button>
+                    </li>
+                </ul>
+            </navbar>
+        </div>
     </div>
 
     <section class="d-flex w-100 landing-sec">
@@ -451,66 +566,65 @@
         </div>
     </section>
 
-    <footer>
-        <div class="footer">
-            <div class="footer-column">
-                <h3>ABOUT</h3>
-                <a href="#">About Us</a>
-                <a href="#">Stockists</a>
-                <a href="#">Ltd Store</a>
-                <a href="#">Harper - 'Try Before You Buy'</a>
-                <a href="#">ReWorks - Repair Service</a>
-                <a href="#">Book In-Store Suit Fitting</a>
-                <a href="#">Kvatt x Universal Works</a>
-                <a href="#">Refer A Friend</a>
+    <footer class="p-5 pb-1">
+        <div class="d-flex justify-content-around position-relative b-0 w-100">
+            <div class="footer-column w-25">
+                <h5 class="mb-4">ABOUT</h5>
+                <a class="mb-1" href="#">About Us</a>
+                <a class="mb-1" href="#">Stockists</a>
+                <a class="mb-1" href="#">Ltd Store</a>
+                <a class="mb-1" href="#">ReWorks - Repair Service</a>
+                <a class="mb-1" href="#">Book In-Store Suit Fitting</a>
+                <a class="mb-1" href="#">Kvatt x Universal Works</a>
+                <a class="mb-1" href="#">Refer A Friend</a>
             </div>
-            <div class="footer-column">
-                <h3>INFORMATION</h3>
-                <a href="#">Opportunities</a>
-                <a href="#">UW Community</a>
-                <a href="#">FAQ's</a>
-                <a href="#">Delivery & Shipping Info</a>
-                <a href="#">Contact</a>
-                <a href="#">Returns Portal</a>
-                <a href="#">Returns Policy</a>
+            <div class="footer-column w-25">
+                <h5 class="mb-4">INFORMATION</h5>
+                <a class="mb-1" href="#">Opportunities</a>
+                <a class="mb-1" href="#">UW Community</a>
+                <a class="mb-1" href="#">FAQ's</a>
+                <a class="mb-1" href="#">Delivery & Shipping Info</a>
+                <a class="mb-1" href="#">Contact</a>
+                <a class="mb-1" href="#">Returns Portal</a>
+                <a class="mb-1" href="#">Returns Policy</a>
             </div>
-            <div class="footer-column">
-                <h3>LEGAL</h3>
-                <a href="#">Terms of Service</a>
-                <a href="#">Cookie Policy</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="#">Klarna - How It Works</a>
-                <a href="#">Klarna - Policy</a>
+            <div class="footer-column w-25">
+                <h5 class="mb-4">LEGAL</h5>
+                <a class="mb-1" href="#">Terms of Service</a>
+                <a class="mb-1" href="#">Cookie Policy</a>
+                <a class="mb-1" href="#">Privacy Policy</a>
+                <a class="mb-1" href="#">Terms & Conditions</a>
+                <a class="mb-1" href="#">Klarna - How It Works</a>
+                <a class="mb-1" href="#">Klarna - Policy</a>
             </div>
-            <div class="footer-column contact">
-                <h3>CONTACT</h3>
-                <p>+44 (0)1159249363</p>
-                <p>web@universalworks.co.uk</p>
-                <p>Mon-Thurs 9:00-17:30</p>
-                <p>Friday 9:00-15:00</p>
-                <p>Company Number: 06804395</p>
+            <div class="footer-column w-25 fs-7">
+                <h5 class="mb-4">CONTACT</h5>
+                <p class="mb-1">+44 (0)1159249363</p>
+                <p class="mb-1">web@universalworks.co.uk</p>
+                <p class="mb-1">Mon-Thurs 9:00-17:30</p>
+                <p class="mb-1">Friday 9:00-15:00</p>
+                <p class="mb-1">Company Number: 06804395</p>
             </div>
-            <div class="footer-column">
-                <h3>FOLLOW</h3>
-                <div class="social-icons">
-                    <img src="/Assets/instagram.jpeg" alt="Instagram">
-                    <img src="/Assets/facebook.png" alt="Facebook">
-                    <img src="/Assets/pinterest.png" alt="Pinterest">
-                    <img src="/Assets/youtube.png" alt="YouTube">
-                    <img src="/Assets/tiktok.png" alt="TikTok">
+            <div class="footer-column w-25">
+                <h5 class="mb-4">FOLLOW</h5>
+                <div class="social-icons d-flex gap-2">
+                    <img class="rounded-circle" src="/Assets/instagram.jpeg" alt="Instagram">
+                    <img class="rounded-circle" src="/Assets/facebook.png" alt="Facebook">
+                    <img class="rounded-circle" src="/Assets/pinterest.png" alt="Pinterest">
+                    <img class="rounded-circle" src="/Assets/youtube.png" alt="YouTube">
+                    <img class="rounded-circle" src="/Assets/tiktok.png" alt="TikTok">
                 </div>
             </div>
         </div>
-        <div class="made-payments">
+        <div class="d-flex flex-row justify-content-between align-items-center">
             <div class="made-by">
-                <a href="">
+                <a class="text-white fs-5" href="">
                     Made by Syed Ali
                 </a>
             </div>
-            <div class="payment-combine">
-                <div class="currency-selector">
-                    <select class="currency-dropdown">
+            <div class="d-flex flex-column align-items-center">
+                <div class="d-flex justify-content-center mb-4">
+                    <select class="currency-dropdown btn text-white border border-white rounded-pill px-3 fs-5">
                         <option value="GBP">United Kingdom (£)</option>
                         <option value="USD">United States ($)</option>
                         <option value="EUR">Euro (€)</option>
@@ -534,18 +648,160 @@
                     </select>
                 </div>
                 <div class="payments">
-                    <img src="/Assets/visa.png" alt="Visa">
-                    <img src="/Assets/mastercard.png" alt="Mastercard">
-                    <img src="/Assets/paypal.png" alt="PayPal">
-                    <img src="/Assets/gpay.jpeg" alt="Google Pay">
-                    <img src="/Assets/visa.png" alt="Visa">
-                    <img src="/Assets/mastercard.png" alt="Mastercard">
-                    <img src="/Assets/paypal.png" alt="PayPal">
-                    <img src="/Assets/gpay.jpeg" alt="Google Pay">
+                    <img class="m-1" src="/Assets/visa.png" alt="Visa">
+                    <img class="m-1" src="/Assets/mastercard.png" alt="Mastercard">
+                    <img class="m-1" src="/Assets/paypal.png" alt="PayPal">
+                    <img class="m-1" src="/Assets/gpay.jpeg" alt="Google Pay">
+                    <img class="m-1" src="/Assets/visa.png" alt="Visa">
+                    <img class="m-1" src="/Assets/mastercard.png" alt="Mastercard">
+                    <img class="m-1" src="/Assets/paypal.png" alt="PayPal">
+                    <img class="m-1" src="/Assets/gpay.jpeg" alt="Google Pay">
                 </div>
             </div>
         </div>
     </footer>
+
+    <footer>
+        <div class="container py-5">
+            <div class="accordion mb-5" id="footerAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="aboutHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#about" aria-expanded="false">
+                            ABOUT
+                        </button>
+                    </h2>
+                    <div id="about" class="footer-column-acc ps-4 py-3 accordion-collapse collapse"
+                        data-bs-parent="#footerAccordion">
+                        <a class="mb-1" href="#">About Us</a>
+                        <a class="mb-1" href="#">Stockists</a>
+                        <a class="mb-1" href="#">Ltd Store</a>
+                        <a class="mb-1" href="#">Harper - 'Try Before You Buy'</a>
+                        <a class="mb-1" href="#">ReWorks - Repair Service</a>
+                        <a class="mb-1" href="#">Book In-Store Suit Fitting</a>
+                        <a class="mb-1" href="#">Kvatt x Universal Works</a>
+                        <a class="mb-1" href="#">Refer A Friend</a>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="infoHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#info" aria-expanded="false">
+                            INFORMATION
+                        </button>
+                    </h2>
+                    <div id="info" class="footer-column-acc ps-4 py-3 accordion-collapse collapse"
+                        data-bs-parent="#footerAccordion">
+                        <a class="mb-1" href="#">Opportunities</a>
+                        <a class="mb-1" href="#">UW Community</a>
+                        <a class="mb-1" href="#">FAQ's</a>
+                        <a class="mb-1" href="#">Delivery & Shipping Info</a>
+                        <a class="mb-1" href="#">Contact</a>
+                        <a class="mb-1" href="#">Returns Portal</a>
+                        <a class="mb-1" href="#">Returns Policy</a>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="legalHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#legal" aria-expanded="false">
+                            LEGAL
+                        </button>
+                    </h2>
+                    <div id="legal" class="footer-column-acc ps-4 py-3 accordion-collapse collapse"
+                        data-bs-parent="#footerAccordion">
+                        <a class="mb-1" href="#">Terms of Service</a>
+                        <a class="mb-1" href="#">Cookie Policy</a>
+                        <a class="mb-1" href="#">Privacy Policy</a>
+                        <a class="mb-1" href="#">Terms & Conditions</a>
+                        <a class="mb-1" href="#">Klarna - How It Works</a>
+                        <a class="mb-1" href="#">Klarna - Policy</a>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="contactHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#contact" aria-expanded="false">
+                            CONTACT
+                        </button>
+                    </h2>
+                    <div id="contact" class="footer-column-acc ps-4 py-3 accordion-collapse collapse"
+                        data-bs-parent="#footerAccordion">
+                        <p class="mb-1">+44 (0)1159249363</p>
+                        <p class="mb-1">web@universalworks.co.uk</p>
+                        <p class="mb-1">Mon-Thurs 9:00-17:30</p>
+                        <p class="mb-1">Friday 9:00-15:00</p>
+                        <p class="mb-1">Company Number: 06804395</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="followHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#follow" aria-expanded="false">
+                            FOLLOW
+                        </button>
+                    </h2>
+                    <div id="follow" class="social-icons-acc footer-column-acc ps-4 py-3 accordion-collapse collapse"
+                        data-bs-parent="#footerAccordion">
+                        <img class="rounded-circle" src="/Assets/instagram.jpeg" alt="Instagram">
+                        <img class="rounded-circle" src="/Assets/facebook.png" alt="Facebook">
+                        <img class="rounded-circle" src="/Assets/pinterest.png" alt="Pinterest">
+                        <img class="rounded-circle" src="/Assets/youtube.png" alt="YouTube">
+                        <img class="rounded-circle" src="/Assets/tiktok.png" alt="TikTok">
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column align-items-end">
+                <select class="currency-dropdown btn text-white border border-white rounded-pill px-3 fs-5">
+                    <option value="GBP">United Kingdom (£)</option>
+                    <option value="USD">United States ($)</option>
+                    <option value="EUR">Euro (€)</option>
+                    <option value="JPY">Japan (¥)</option>
+                    <option value="CAD">Canada ($)</option>
+                    <option value="AUD">Australia ($)</option>
+                    <option value="INR">India (₹)</option>
+                    <option value="CNY">China (¥)</option>
+                    <option value="CHF">Switzerland (CHF)</option>
+                    <option value="SEK">Sweden (kr)</option>
+                    <option value="NZD">New Zealand ($)</option>
+                    <option value="SGD">Singapore ($)</option>
+                    <option value="HKD">Hong Kong ($)</option>
+                    <option value="NOK">Norway (kr)</option>
+                    <option value="MXN">Mexico ($)</option>
+                    <option value="BRL">Brazil (R$)</option>
+                    <option value="ZAR">South Africa (R)</option>
+                    <option value="RUB">Russia (₽)</option>
+                    <option value="KRW">South Korea (₩)</option>
+                    <option value="TRY">Turkey (₺)</option>
+                </select>
+            </div>
+
+            <div class="d-flex flex-column align-items-center mt-5">
+                <div class="payments mb-3">
+                    <img class="m-1" src="/Assets/visa.png" alt="Visa">
+                    <img class="m-1" src="/Assets/mastercard.png" alt="Mastercard">
+                    <img class="m-1" src="/Assets/paypal.png" alt="PayPal">
+                    <img class="m-1" src="/Assets/gpay.jpeg" alt="Google Pay">
+                    <img class="m-1" src="/Assets/visa.png" alt="Visa">
+                    <img class="m-1" src="/Assets/mastercard.png" alt="Mastercard">
+                    <img class="m-1" src="/Assets/paypal.png" alt="PayPal">
+                    <img class="m-1" src="/Assets/gpay.jpeg" alt="Google Pay">
+                </div>
+
+                <div class="made-by">
+                    <a class="text-white fs-6" href="">
+                        Made by SYED ALI
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>
