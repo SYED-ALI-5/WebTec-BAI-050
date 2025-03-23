@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="checkoutform.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <form id="form" action="/">
+            <h1>Registration</h1>
+            <div class="input-control">
+                <input id="username" name="username" type="text" placeholder="Enter username*">
+                <div class="error"></div>
+
+            </div>
+            <div class="input-control">
+                <input id="email" name="email" type="text" placeholder="Enter email">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <input id="phone" name="phone" type="text" placeholder="Enter phone number">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <input id="password" name="password" type="password" placeholder="Enter Password">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <input id="password2" name="password2" type="password" placeholder="Enter Password Again">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <input id="address" name="address" type="text" placeholder="Enter Address">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <input type="text" placeholder="Enter Credit Card Number" pattern="\d{16}" maxlength="16"
+                    title="Credit Card Number must be 16 digits (only numbers allowed)">
+            </div>
+            <div class="input-control">
+                <input type="text" placeholder="Enter CVV" pattern="\d{3}" maxlength="3" title="Cvv should be 3 digits">
+            </div>
+            <div class="input-control">
+                <input id="expiry" name="expiry" type="month" placeholder="Enter Expiry Date">
+                <div class="error"></div>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+    <script defer src="checkoutform.js"></script>
+</body>
+
+</html>

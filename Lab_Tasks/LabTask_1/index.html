@@ -74,7 +74,7 @@
                                 <input type="checkbox" id="toggleDropdown1" class="d-none">
                                 <label for="toggleDropdown1"
                                     class="dropdown-toggle border-0 bg-white py-2 ps-3 rounded-pill d-inline-flex align-items-center">
-                                    <span class="text-black" >SHOP</span>
+                                    <span class="text-black">SHOP</span>
                                     <span class="ps-3">
                                         <svg class="rotate-icon" width="15" height="10" viewBox="0 0 15 10" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -96,7 +96,7 @@
                                 <input type="checkbox" id="toggleDropdown2" class="d-none">
                                 <label for="toggleDropdown2"
                                     class="dropdown-toggle border-0 bg-white py-2 ps-3 rounded-pill d-inline-flex align-items-center">
-                                    <span class="text-black" >READ</span>
+                                    <span class="text-black">READ</span>
                                     <span class="ps-3">
                                         <svg class="rotate-icon" width="15" height="10" viewBox="0 0 15 10" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -118,7 +118,7 @@
                                 <input type="checkbox" id="toggleDropdown3" class="d-none">
                                 <label for="toggleDropdown3"
                                     class="dropdown-toggle border-0 bg-white py-2 ps-3 rounded-pill d-inline-flex align-items-center">
-                                    <span class="text-black" >ABOUT US</span>
+                                    <span class="text-black">ABOUT US</span>
                                     <span class="ps-3">
                                         <svg class="rotate-icon" width="15" height="10" viewBox="0 0 15 10" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -157,7 +157,7 @@
                 <div id="logo">
                     <img class="my-2 mx-3" src="/Assets/Logo.svg" alt="Logo">
                 </div>
-                <ul class="items mb-0">
+                <ul class="items mb-0 p-0">
                     <li class="d-flex flex-row">
                         <button class="border-0 bg-white d-flex flex-row align-items-center my-0 mx-2">
                             <img src="/Assets/profile.png" alt="">
@@ -193,7 +193,7 @@
     </section>
 
     <section class="d-flex flex-column justify-content-center mt-5 mx-4 text-black">
-        <div class="d-flex flex-column justify-content-between align-items-center">
+        <div class="d-flex flex-column">
             <div class="d-flex flex-row align-items-center view-head">
                 <h2>View</h2>
                 <img src="/Assets/arrow.jpeg" alt="">
@@ -201,31 +201,39 @@
         </div>
         <div class="d-flex flex-row flex-wrap align-items-center justify-content-between mt-4 mb-5">
             <div class="view-article">
-                <a href=""><img src="Assets/jackets.webp" alt=""></a>
-                <h1>Jackets.</h1>
-                <div class="d-flex flex-row mt-1">
-                    <p class="pe-1">Model wears our</p>
-                    <a class="text-black" href="">Trucker Jacket in Ecru Recycled Cotton.</a>
+                <div class="image-text-wrapper">
+                    <a href=""><img src="Assets/jackets.webp" alt=""></a>
+                    <h1>Jackets.</h1>
+                    <div class="d-flex flex-row mt-1 flex-wrap">
+                        <p class="pe-1 text-wrap">Model wears our <a class="text-black" href="">Trucker Jacket in Ecru
+                                Recycled
+                                Cotton.</a></p>
+                    </div>
                 </div>
                 <button
                     class="view-button text-black bg-white fw-bold border border-dark rounded-pill mt-3 px-4 py-2">View.</button>
             </div>
             <div class="view-article">
-                <a href=""><img src="Assets/trousers.webp" alt=""></a>
-                <h1>Trousers.</h1>
-                <div class="d-flex flex-row mt-1">
-                    <p class="pe-1">Model wears our</p>
-                    <a class="text-black" href="">Parachute Pant in Olive Recycled Polytech.</a>
+                <div class="image-text-wrapper">
+                    <a href=""><img src="Assets/trousers.webp" alt=""></a>
+                    <h1>Trousers.</h1>
+                    <div class="d-flex flex-row mt-1 flex-wrap">
+                        <p class="pe-1 text-wrap">Model wears our <a class="text-black" href="">Parachute Pant in Olive
+                                Recycled Polytech.</a></p>
+                    </div>
                 </div>
                 <button
                     class="view-button text-black bg-white fw-bold border border-dark rounded-pill mt-3 px-4 py-2">View.</button>
             </div>
             <div class="view-article">
-                <a href=""><img src="/Assets/overshirts.webp" alt=""></a>
-                <h1>Overshirts.</h1>
-                <div class="d-flex flex-row mt-1">
-                    <p class="pe-1">Model wears our </p>
-                    <a class="text-black" href="">Travail Overshirt in Navy Tropical Suiting.</a>
+                <div class="image-text-wrapper">
+                    <a href=""><img src="Assets/overshirts.webp" alt=""></a>
+                    <h1>Overshirts.</h1>
+                    <div class="d-flex flex-row mt-1 flex-wrap">
+                        <p class="pe-1 text-wrap">Model wears our <a class="text-black" href="">Travail Overshirt in
+                                Navy
+                                Tropical Suiting.</a></p>
+                    </div>
                 </div>
                 <button
                     class="view-button text-black bg-white fw-bold border border-dark rounded-pill mt-3 px-4 py-2">View.</button>
@@ -235,24 +243,22 @@
     </section>
 
     <section class="d-flex flex-row flex-wrap align-items-start justify-content-left">
-        <div class="d-flex flex-row align-items-start justify-content-between w-50 bg-light">
-            <div class="text-black px-3 pt-5 w-25 fs-6">
+        <div class="d-flex flex-row align-items-start justify-content-between w-100 bg-light testing">
+            <div class="text-black px-3 pt-5 flex-grow-1 fs-6">
                 <h1 class="pb-4 fs-2">SUITING.</h1>
-                <span class="suiting-button text-black fw-bold border border-dark rounded-pill ms-2 px-4 py-2">View
-                    All.</span>
-                <p class="pt-4">While many of our pieces match, we would not necessarily consider ourselves makers of
-                    suits in the
-                    traditional sense. Our approach to suiting nods to formal wear, but more often than not, our pieces
-                    lend themselves to a more laid-back, easy-to-wear aesthetic, or relaxed tailoring as we like to call
-                    it.</p>
+                <span class="suiting-button text-black fw-bold border border-dark rounded-pill ms-2 px-4 py-2">View All.</span>
+                <p class="pt-4">While many of our pieces match, we would not necessarily consider ourselves makers of suits in the
+                    traditional sense. Our approach to suiting nods to formal wear, but more often than not, our pieces lend themselves
+                    to a more laid-back, easy-to-wear aesthetic, or relaxed tailoring as we like to call it.
+                </p>
             </div>
-            <div class="suiting-img">
-                <img src="/Assets/suiting.webp" alt="">
+            <div class="suiting-img flex-grow-1 d-flex justify-content-center">
+                <img src="Assets/suiting.webp" alt="">
             </div>
         </div>
-        <div class="suiting-right d-flex flex-column align-items-center w-50 overflow-auto p-0">
-            <div class="d-flex flex-row flex-wrap justify-content-between">
-                <div class="suiting-article position-relative text-black my-2 mx-1">
+        <div class="suiting-right d-flex flex-row overflow-auto p-0 w-100">
+            <div class="d-flex flex-nowrap">
+                <div class="suiting-article position-relative text-black my-2 mx-1 text-wrap">
                     <a href="">
                         <img class="original-image" src="Assets/suit1-1.webp" alt="">
                         <img class="hover-image" src="Assets/suit1-2.webp" alt="">
@@ -262,7 +268,8 @@
                     <p class="hover-text">Size Availability:</p>
                     <p class="hover-text" style="margin-top: 5px;">XS S M L XL XXL XXXL</p>
                 </div>
-                <div class="suiting-article position-relative text-black my-2 mx-1">
+                
+                <div class="suiting-article position-relative text-black my-2 mx-1 text-wrap">
                     <a href="">
                         <img class="original-image" src="Assets/suit2-1.webp" alt="">
                         <img class="hover-image" src="Assets/suit2-2.webp" alt="">
@@ -273,8 +280,9 @@
                     <p class="hover-text" style="margin-top: 5px;">XS S M L XL XXL XXXL</p>
                 </div>
             </div>
-            <div class="d-flex flex-row flex-wrap justify-content-between">
-                <div class="suiting-article position-relative text-black my-2 mx-1">
+            
+            <div class="d-flex flex-nowrap">
+                <div class="suiting-article position-relative text-black my-2 mx-1 text-wrap">
                     <a href="">
                         <img class="original-image" src="Assets/suit9-1.webp" alt="">
                         <img class="hover-image" src="Assets/suit9-2.webp" alt="">
@@ -284,7 +292,7 @@
                     <p class="hover-text">Size Availability:</p>
                     <p class="hover-text" style="margin-top: 5px;">XS S M L XL XXL XXXL</p>
                 </div>
-                <div class="suiting-article position-relative text-black my-2 mx-1">
+                <div class="suiting-article position-relative text-black my-2 mx-1 text-wrap">
                     <a href="">
                         <img class="original-image" src="Assets/suit10-1.webp" alt="">
                         <img class="hover-image" src="Assets/suit10-2.webp" alt="">
@@ -295,8 +303,8 @@
                     <p class="hover-text" style="margin-top: 5px;">XS S M L XL XXL XXXL</p>
                 </div>
             </div>
-            <div class="d-flex flex-row flex-wrap justify-content-between">
-                <div class="suiting-article position-relative text-black my-2 mx-1">
+            <div class="d-flex flex-nowrap">
+                <div class="suiting-article position-relative text-black my-2 mx-1 text-wrap">
                     <a href="">
                         <img class="original-image" src="Assets/suit3-1.webp" alt="">
                         <img class="hover-image" src="Assets/suit3-2.webp" alt="">
@@ -306,7 +314,7 @@
                     <p class="hover-text">Size Availability:</p>
                     <p class="hover-text" style="margin-top: 5px;">XS S M L XL XXL XXXL</p>
                 </div>
-                <div class="suiting-article position-relative text-black my-2 mx-1">
+                <div class="suiting-article position-relative text-black my-2 mx-1 text-wrap">
                     <a href="">
                         <img class="original-image" src="Assets/suit4-1.webp" alt="">
                         <img class="hover-image" src="Assets/suit4-2.webp" alt="">
@@ -317,8 +325,8 @@
                     <p class="hover-text" style="margin-top: 5px;">XS S M L XL XXL XXXL</p>
                 </div>
             </div>
-            <div class="d-flex flex-row flex-wrap justify-content-between">
-                <div class="suiting-article position-relative text-black my-2 mx-1">
+            <div class="d-flex flex-nowrap">
+                <div class="suiting-article position-relative text-black my-2 mx-1 text-wrap">
                     <a href="">
                         <img class="original-image" src="Assets/suit5-1.webp" alt="">
                         <img class="hover-image" src="Assets/suit5-2.webp" alt="">
@@ -328,7 +336,7 @@
                     <p class="hover-text">Size Availability:</p>
                     <p class="hover-text" style="margin-top: 5px;">XS S M L XL XXL XXXL</p>
                 </div>
-                <div class="suiting-article position-relative text-black my-2 mx-1">
+                <div class="suiting-article position-relative text-black my-2 mx-1 text-wrap">
                     <a href="">
                         <img class="original-image" src="Assets/suit6-1.webp" alt="">
                         <img class="hover-image" src="Assets/suit6-2.webp" alt="">
@@ -339,8 +347,8 @@
                     <p class="hover-text" style="margin-top: 5px;">XS S M L XL XXL XXXL</p>
                 </div>
             </div>
-            <div class="d-flex flex-row flex-wrap justify-content-between">
-                <div class="suiting-article position-relative text-black my-2 mx-1">
+            <div class="d-flex flex-nowrap">
+                <div class="suiting-article position-relative text-black my-2 mx-1 text-wrap">
                     <a href="">
                         <img class="original-image" src="Assets/suit7-1.webp" alt="">
                         <img class="hover-image" src="Assets/suit7-2.webp" alt="">
@@ -350,7 +358,7 @@
                     <p class="hover-text">Size Availability:</p>
                     <p class="hover-text" style="margin-top: 5px;">XS S M L XL XXL XXXL</p>
                 </div>
-                <div class="suiting-article position-relative text-black my-2 mx-1">
+                <div class="suiting-article position-relative text-black my-2 mx-1 text-wrap">
                     <a href="">
                         <img class="original-image" src="Assets/suit8-1.webp" alt="">
                         <img class="hover-image" src="Assets/suit8-2.webp" alt="">
