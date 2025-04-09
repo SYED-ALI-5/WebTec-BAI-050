@@ -25,14 +25,47 @@
             <navbar
                 class="d-flex flex-row align-items-center justify-content-between position-sticky top-0 pt-1 px-4 navbar">
                 <ul class="d-flex mb-0 p-0">
-                    <li class="list-unstyled"><a class="fw-semibold text-decoration-none text-black mx-2"
+                    <li class="list-unstyled"><a class="fw-semibold text-decoration-none text-black mx-4"
                             href="">SHOP</a></li>
-                    <li class="list-unstyled"><a class="fw-semibold text-decoration-none text-black mx-2"
+                    <li class="list-unstyled"><a class="fw-semibold text-decoration-none text-black mx-4"
                             href="">READ</a></li>
-                    <li class="list-unstyled"><a class="fw-semibold text-decoration-none text-black mx-2" href="">ABOUT
+                    <li class="list-unstyled"><a class="fw-semibold text-decoration-none text-black mx-4" href="">ABOUT
                             US</a></li>
-                    <li class="list-unstyled"><a class="fw-semibold text-decoration-none text-black mx-2"
+                    <li class="list-unstyled"><a class="fw-semibold text-decoration-none text-black mx-4"
                             href="">STORES</a></li>
+                    <li class="list-unstyled position-relative">
+                        <a id="megaMenuBtn" class="fw-semibold text-decoration-none text-black mx-4"
+                            href="javascript:void(0)">PREVIOUS TASKS</a>
+                        <div id="megaMenu" class="mega-menu">
+                            <div class="task">
+                                <h5 class="text-black">Assignment 1</h5>
+                                <p>In this assignment, I created a professional CV using only basic HTML and CSS —
+                                    without using any external frameworks or libraries. Additionally, I implemented at
+                                    least one CSS feature that was not covered in class, demonstrating my ability to
+                                    explore and apply new concepts on my own.</p>
+                                <a href="../../Assignments/Asignment_1/index.html" target="_blank">View Task</a>
+                            </div>
+                            <div class="task">
+                                <h5 class="text-black">Assignment 2</h5>
+                                <p>In this assignment, I developed a visually appealing landing page for an e-commerce
+                                    website using only HTML and CSS, without the use of any frameworks or libraries. The
+                                    HTML structure is semantic and well-organized, and the CSS styling ensures a clean,
+                                    user-friendly design.</p>
+                                <a href="../../Assignments/Asignment_2/index.html" target="_blank">View Task</a>
+                            </div>
+                            <div class="task">
+                                <h5 class="text-black">Lab Task 1</h5>
+                                <p>For this lab task, I created a modern and responsive e-commerce landing page using HTML, CSS, and Bootstrap. The design focuses on clean layout and usability, with responsiveness ensured across various screen sizes using Bootstrap's grid system and components.</p>
+                                <a href="../../Lab_Tasks/LabTask_1/index.html" target="_blank">View Task</a>
+                            </div>
+                            <div class="task">
+                                <h5 class="text-black">Lab Task 2</h5>
+                                <p>In this lab task, I developed a Checkout Page for an e-commerce platform using HTML, CSS, and JavaScript, with a primary focus on client-side validation. Used HTML5 attributes such as required, pattern, minlength, and maxlength for basic validation.</p>
+                                <a href="../../Lab_Tasks/LabTask_2/index.html" target="_blank">View Task</a>
+                            </div>
+                        </div>
+                    </li>
+
                 </ul>
                 <div id="logo">
                     <img class="my-2 mx-3" src="Assets/Logo.svg" alt="Logo">
@@ -246,9 +279,12 @@
         <div class="d-flex flex-row align-items-start justify-content-between w-100 bg-light testing">
             <div class="text-black px-3 pt-5 flex-grow-1 fs-6">
                 <h1 class="pb-4 fs-2">SUITING.</h1>
-                <span class="suiting-button text-black fw-bold border border-dark rounded-pill ms-2 px-4 py-2">View All.</span>
-                <p class="pt-4">While many of our pieces match, we would not necessarily consider ourselves makers of suits in the
-                    traditional sense. Our approach to suiting nods to formal wear, but more often than not, our pieces lend themselves
+                <span class="suiting-button text-black fw-bold border border-dark rounded-pill ms-2 px-4 py-2">View
+                    All.</span>
+                <p class="pt-4">While many of our pieces match, we would not necessarily consider ourselves makers of
+                    suits in the
+                    traditional sense. Our approach to suiting nods to formal wear, but more often than not, our pieces
+                    lend themselves
                     to a more laid-back, easy-to-wear aesthetic, or relaxed tailoring as we like to call it.
                 </p>
             </div>
@@ -268,7 +304,7 @@
                     <p class="hover-text">Size Availability:</p>
                     <p class="hover-text" style="margin-top: 5px;">XS S M L XL XXL XXXL</p>
                 </div>
-                
+
                 <div class="suiting-article position-relative text-black my-2 mx-1 text-wrap">
                     <a href="">
                         <img class="original-image" src="Assets/suit2-1.webp" alt="">
@@ -280,7 +316,7 @@
                     <p class="hover-text" style="margin-top: 5px;">XS S M L XL XXL XXXL</p>
                 </div>
             </div>
-            
+
             <div class="d-flex flex-nowrap">
                 <div class="suiting-article position-relative text-black my-2 mx-1 text-wrap">
                     <a href="">
@@ -809,7 +845,21 @@
             </div>
         </div>
     </footer>
+    <script>
+        const megaMenuBtn = document.getElementById('megaMenuBtn');
+        const megaMenu = document.getElementById('megaMenu');
 
+        megaMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            megaMenu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!megaMenu.contains(e.target) && e.target !== megaMenuBtn) {
+                megaMenu.classList.remove('show');
+            }
+        });
+    </script>
 </body>
 
 </html>
