@@ -1,0 +1,50 @@
+.size-btn-foot {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.size-btn-foot.active {
+    background-color: #ddd;
+}
+
+.color-thumbnail {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.color-thumbnail.active {
+    border-color: #000;
+}
+
+.specific-img-foot img{
+    width: 600px;
+    height: 700px;
+}
+
+.hoverSpecificFoot-image {
+    margin-left: 115px;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+
+.originalSpecificFoot-image {
+    left: 0;
+}
+
+.originalSpecificFoot-image:hover {
+    left: 0;
+    opacity: 0;
+}
+
+.hoverSpecificFoot-image:hover {
+    opacity: 1;
+}

@@ -1,0 +1,48 @@
+<div class="row">
+    <!-- Left side (Image) -->
+    <div class="col-md-6 text-center specific-img-foot p-0">
+        <img class="originalSpecificFoot-image" src="<%= data.image %>"" alt=" Product" class="img-fluid">
+        <img class="hoverSpecificFoot-image" src="<%= data.hoverImage %>" alt="Product" class="img-fluid">
+    </div>
+
+    <!-- Right side (Details) -->
+    <div class="col-md-6 p-0 my-5 text-black">
+        <h2>
+            <%= data.desc %>
+        </h2>
+        <h4 class="text-danger foot-price">
+            <%= data.price %>
+        </h4>
+
+        <!-- Sizes -->
+        <div class="my-3">
+            <div class="d-flex flex-wrap">
+                <% data.sizes.forEach(size=> { %>
+                    <div class="size-btn-foot">
+                        <%= size %>
+                    </div>
+                    <% }); %>
+            </div>
+        </div>
+
+
+        <!-- Quantity Counter -->
+        <div class="my-3">
+            <label class="form-label fw-semibold">Quantity:</label>
+            <div class="d-flex flex-row" style="width: 250px;">
+                <button class="btn btn-outline-secondary me-4 px-4" type="button"
+                    onclick="decreaseQuantityFoot()">-</button>
+                <input type="text" class="form-control text-center" id="quantityInputFootwear" value="1" readonly>
+                <button class="btn btn-outline-secondary ms-4 px-4" type="button"
+                    onclick="increaseQuantityFoot()">+</button>
+            </div>
+        </div>
+
+        <!-- Add to cart -->
+        <button id="addToCartBtn" class="btn btn-success px-4 py-2 mt-3" data-id="<%= data.id %>">ADD TO
+            CART</button>
+
+
+    </div>
+</div>
+<script defer src="/javascripts/specificFootwear.js"></script>Í

@@ -1,0 +1,50 @@
+.size-btn {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.size-btn.active {
+    background-color: #ddd;
+}
+
+.color-thumbnail {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.color-thumbnail.active {
+    border-color: #000;
+}
+
+.specific-img img{
+    width: 600px;
+    height: 700px;
+}
+
+.hoverSpecific-image {
+    margin-left: 115px;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+
+.originalSpecific-image {
+    left: 0;
+}
+
+.originalSpecific-image:hover {
+    left: 0;
+    opacity: 0;
+}
+
+.hoverSpecific-image:hover {
+    opacity: 1;
+}

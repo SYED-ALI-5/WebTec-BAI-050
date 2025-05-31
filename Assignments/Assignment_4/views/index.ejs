@@ -1,0 +1,277 @@
+<section class="d-flex w-100 landing-sec">
+    <div
+        class="landing-left z-n1 d-flex flex-grow-1 align-items-end justify-content-around text-white text-center position-relative">
+        <div class="landing-left-content pb-5">
+            <h1 class="pb-3">NEW IN.</h1>
+            <p class="pb-3">Spring-Summer 2025.</p>
+            <button
+                class="landing-button text-black bg-white fw-bold border-0 rounded-pill mt-2 px-4 py-2">View.</button>
+        </div>
+    </div>
+    <div
+        class="landing-right z-n1 d-flex flex-grow-1 align-items-end justify-content-around text-white text-center position-relative">
+        <div class="landing-right-content pb-5">
+            <h1 class="pb-3">ANON.</h1>
+            <p class="pb-3">NO FACES, JUST FITS.</p>
+            <button
+                class="landing-button text-black bg-white fw-bold border-0 rounded-pill mt-2 px-4 py-2">View.</button>
+        </div>
+    </div>
+</section>
+
+<section class="d-flex flex-column justify-content-center mt-5 mx-4 text-black">
+    <div class="d-flex flex-column">
+        <div class="d-flex flex-row align-items-center view-head">
+            <h2>View</h2>
+            <img src="/images/Assets/arrow.jpeg" alt="">
+        </div>
+    </div>
+    <div class="d-flex flex-row flex-wrap align-items-center justify-content-between mt-4 mb-5">
+        <% for( let index=0; index < views.length; index++ ) { %>
+            <div class="view-article">
+                <div class="image-text-wrapper">
+                    <a href=""><img src="<%= views[index].image %>" alt=""></a>
+                    <h1>
+                        <%= views[index].name %>
+                    </h1>
+                    <div class="d-flex flex-row mt-1 flex-wrap">
+                        <p class="pe-1 text-wrap">Model wears our <a class="text-black" href="">
+                                <%= views[index].description %>
+                            </a></p>
+                    </div>
+                </div>
+                <button
+                    class="view-button text-black bg-white fw-bold border border-dark rounded-pill mt-3 px-4 py-2">View.</button>
+            </div>
+            <% } %>
+    </div>
+</section>
+
+<section class="d-flex flex-row flex-wrap align-items-start justify-content-left">
+    <div class="d-flex flex-row align-items-start justify-content-between w-100 bg-light testing">
+        <div class="text-black px-3 pt-5 flex-grow-1 fs-6">
+            <h1 class="pb-4 fs-2">SUITING.</h1>
+            <span class="suiting-button text-black fw-bold border border-dark rounded-pill ms-2 px-4 py-2">View
+                All.</span>
+            <p class="pt-4">While many of our pieces match, we would not necessarily consider ourselves makers of
+                suits in the
+                traditional sense. Our approach to suiting nods to formal wear, but more often than not, our pieces
+                lend themselves
+                to a more laid-back, easy-to-wear aesthetic, or relaxed tailoring as we like to call it.
+            </p>
+        </div>
+        <div class="suiting-img flex-grow-1 d-flex justify-content-center">
+            <img src="/images/Assets/suiting.webp" alt="">
+        </div>
+    </div>
+    <div class="suiting-right d-flex flex-row overflow-auto p-0 w-100">
+        <% for( let index=0; index < suitings.length; index++ ) { %>
+            <div class="d-flex flex-nowrap">
+                <div class="suiting-article position-relative text-black my-2 mx-1 text-wrap">
+                    <a href="/specificSuiting/<%= suitings[index]._id %>?item=1">
+                        <img class="original-image" src="<%= suitings[index].image1 %>" alt="">
+                        <img class="hover-image" src="<%= suitings[index].image2 %>" alt="">
+                    </a>
+                    <p class="default-text">
+                        <%= suitings[index].desc1 %>
+                    </p>
+                    <p class="default-text" style="margin-top: 5px;">
+                        <%= suitings[index].price1 %>
+                    </p>
+                    <p class="hover-text">Size Availability:</p>
+                    <p class="hover-text" style="margin-top: 5px;">
+                        <%= suitings[index].sizes1 %>
+                    </p>
+                </div>
+
+                <div class="suiting-article position-relative text-black my-2 mx-1 text-wrap">
+                    <a href="/specificSuiting/<%= suitings[index]._id %>?item=2">
+                        <img class="original-image" src="<%= suitings[index].image3 %>" alt="">
+                        <img class="hover-image" src="<%= suitings[index].image4 %>" alt="">
+                    </a>
+                    <p class="default-text">
+                        <%= suitings[index].desc2 %>
+                    </p>
+                    <p class="default-text" style="margin-top: 5px;">
+                        <%= suitings[index].price2 %>
+                    </p>
+                    <p class="hover-text">Size Availability:</p>
+                    <p class="hover-text" style="margin-top: 5px;">
+                        <%= suitings[index].sizes2 %>
+                    </p>
+                </div>
+            </div>
+            <% } %>
+    </div>
+</section>
+
+<section
+    class="paraboot-sec text-black mt-4 mb-5 d-flex flex-column justify-content-end align-items-start position-relative">
+    <div class="px-5 pb-5">
+        <div class="d-flex flex-column pb-2">
+            <p class="mb-1 fs-5">NEW IN: FOOTWEAR.</p>
+            <h1 class="mb-3 fs-1 fw-bold">PARABOOT.</h1>
+            <p class="fs-5">New for SS25 in three classic silhouettes: the Michael, Reims and Theirs.</p>
+        </div>
+        <button class="paraboot-button mb-4 text-white fw-bold border border-dark bg-black rounded-pill px-4 py-3">SHOP
+            NOW
+        </button>
+    </div>
+</section>
+
+<section class="d-flex flex-column justify-content-center text-black mx-4">
+    <div class="d-flex flex-row justify-content-between align-items-center">
+        <div class="footwear-head d-flex flex-row align-items-center">
+            <h2 class="text-decoration-underline">Footwear</h2>
+            <img src="/images/Assets/arrow.jpeg" alt="">
+        </div>
+    </div>
+    <div class="d-flex flex-wrap align-items-start justify-content-between mt-3 mb-5">
+        <% for( let index=0; index < footwear.length; index++ ) { %>
+            <div class="footwear-article position-relative" style="width: 300px; word-wrap: break-word;">
+                <a href="/specificFootwear/<%= footwear[index]._id %>">
+                    <img class="original-image" src="<%= footwear[index].image1 %>" alt="" style="width: 100%;">
+                    <img class="hover-image" src="<%= footwear[index].image2 %>" alt="" style="width: 100%;">
+                </a>
+                <p class="default-text" style="white-space: normal; overflow-wrap: break-word;">
+                    <%= footwear[index].desc %>
+                </p>
+                <p class="hover-text" style="white-space: normal; overflow-wrap: break-word; margin-top: 5px;">Size
+                    Availability:</p>
+                <p class="hover-text" style="white-space: normal; overflow-wrap: break-word; margin-top: 5px;">
+                    <%= footwear[index].sizes %>
+                </p>
+                <p class="default-text" style="white-space: normal; overflow-wrap: break-word; margin-top: 5px;">
+                    <%= footwear[index].price %>
+                </p>
+            </div>
+
+            <% } %>
+    </div>
+</section>
+
+<section class="sale-sec mb-4">
+
+</section>
+
+<section class="spring-sec position-relative text-white mb-4">
+    <div class="content position-absolute bottom-0 start-0 pb-5 ps-5">
+        <h1 class="fs-1">Family Style. Spring</h1>
+        <h1 class="fs-1">Store Team Fits.</h1>
+        <p class="fs-5 mt-4 mb-5 lh-sm">
+            While we are still firmly in need-a-jacket season, Team UW couldn't wait to get<br>their hands on their
+            favourite Spring Summer '25 pieces. We are looking forward<br>to the layering potential of these
+            in-between
+            days seen in the slice of styling<br>inspiration from us here.
+        </p>
+        <span class="spring-button d-inline-block fw-bold rounded-pill px-4 py-2 border border-light">
+            <a class="text-decoration-none text-white" href="">Read More</a>
+        </span>
+    </div>
+</section>
+
+<section class="uw-sec container-fluid">
+    <div class="main-uw d-flex justify-content-between align-items-center mb-4 mx-3">
+        <a class="main-uw-1 text-dark text-decoration-none fs-3 fw-light" href="">UWbyyou</a>
+        <a class="main-uw-2 text-dark text-decoration-none fs-5 fw-bold" href="">universal_works</a>
+    </div>
+
+    <div class="slider-container position-relative my-4">
+        <!-- <div class="slider-nav position-absolute top-50 w-100 d-flex justify-content-between px-3">
+                <label for="left" class="text-dark display-6 cursor-pointer">&#10094;</label>
+                <label for="right" class="text-dark display-6 cursor-pointer">&#10095;</label>
+            </div> -->
+
+        <div class="overflow-auto d-flex d-flex overflow-auto gap-3 px-2">
+            <div class="slide mx-5 position-relative">
+                <a href=""><img src="/images/Assets/uw-1.jpg" alt=""></a>
+            </div>
+            <div class="slide mx-5 position-relative">
+                <a href=""><img src="/images/Assets/uw-2.png" alt="">
+                    <div class="play-button"></div>
+                </a>
+            </div>
+            <div class="slide mx-5 position-relative">
+                <a href=""><img src="/images/Assets/uw-3.webp" alt=""></a>
+            </div>
+            <div class="slide mx-5 position-relative">
+                <a href=""><img src="/images/Assets/uw-4.jpg" alt=""></a>
+            </div>
+            <div class="slide mx-5 position-relative">
+                <a href=""><img src="/images/Assets/uw-5.jpeg" alt=""></a>
+            </div>
+            <div class="slide mx-5 position-relative">
+                <a href=""><img src="/images/Assets/uw-6.png" alt="">
+                    <div class="play-button"></div>
+                </a>
+            </div>
+            <div class="slide mx-5 position-relative">
+                <a href=""><img src="/images/Assets/uw-7.jpg" alt=""></a>
+            </div>
+            <div class="slide mx-5 position-relative">
+                <a href=""><img src="/images/Assets/uw-8.png" alt="">
+                    <div class="play-button"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="uw-content text-center mb-4 text-black">
+        <p class="fs-4">Use #UWbyyou on Instagram, @universal_works to share your daily fit pics, fave looks and all
+            your UW. moments.</p>
+    </div>
+
+    <div class="uw-sec-a text-center mb-4">
+        <a class="text-white text-decoration-none rounded-pill px-4 py-2" href="">UW. COMMUNITY</a>
+    </div>
+</section>
+
+<section class="d-flex flex-column justify-content-center mt-5 mx-4 text-black">
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="jour-head d-flex flex-row align-items-center">
+            <h2>The Journal</h2>
+            <img src="/images/Assets/arrow.jpeg" alt="">
+        </div>
+        <a class="jour-a rounded-pill px-4 py-2 fw-bold fs-6 text-decoration-none" href="">See More</a>
+    </div>
+    <div class="d-flex flex-wrap align-items-center justify-content-center mt-3 mb-5">
+        <div class="article mx-4">
+            <a href=""><img src="/images/Assets/Anon.webp" alt=""></a>
+            <p>Anon.</p>
+        </div>
+        <div class="article mx-4">
+            <a href=""><img src="/images/Assets/FamilyStyle.webp" alt=""></a>
+            <p>Family Style. Spring Store Team Fits.</p>
+        </div>
+        <div class="article mx-4">
+            <a href="">
+                <img src="/images/Assets/WornIn.webp" alt="">
+            </a>
+            <p>Worn In, Not Worn Out. Oliver From Beam.</p>
+        </div>
+        <div class="article mx-4">
+            <a href="">
+                <img src="/images/Assets/Limitation.webp" alt="">
+            </a>
+            <p>Limited By Name, Limited By Nature.</p>
+        </div>
+    </div>
+</section>
+
+<section class="form-submision d-flex align-items-center">
+    <div class="container">
+        <div class="newsletter-content bg-white text-center text-success rounded-4 py-4 px-3 float-end">
+            <h2 class="mb-2 fs-4 fw-bold">Sign-up To Our Newsletter</h2>
+            <p class="fs-6 mb-3">The UW. SubClub; for the newcomer, the enthusiast or the veteran. If you'd like to
+                learn more about
+                Universal Works, peer behind the scenes, hear from our founders, learn of collabs and launches, or
+                just read about fabric, fashion and other good stuff, we recommend subscribing.</p>
+            <div class="d-flex align-items-center justify-content-around">
+                <input type="email" class="w-50 newsletter-input form-control border border-success rounded-pill p-2"
+                    placeholder="Enter Your Email Address">
+                <button class="btn fw-bold rounded-pill px-4 py-2 text-white">SUBSCRIBE</button>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/javascripts/index.js"></script>
