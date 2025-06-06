@@ -1,0 +1,46 @@
+<div class="container my-5">
+    <h1 class="mb-4 text-center text-black">Admin Dashboard</h1>
+
+    <div class="row justify-content-around my-5">
+        <!-- Add Product -->
+        <div class="col-md-3 mb-5">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Add Product</h5>
+                    <p class="card-text">Create a new product by entering its details.</p>
+                    <form id="categoryForm" class="mt-3">
+                        <select class="form-select" id="categorySelect" required>
+                            <option value="">-- Select Category --</option>
+                            <option value="Views">Views</option>
+                            <option value="Suiting">Suiting</option>
+                            <option value="Footwear">Footwear</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary">Add Product</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- List Products -->
+        <div class="col-md-3 mb-5 mt-2">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">View Products</h5>
+                    <p class="card-text">See all available products with options to edit or delete.</p>
+                    <form id="viewCategoryForm" class="mt-3">
+                        <select class="form-select" id="viewCategorySelect" required>
+                            <option value="">-- Select Category --</option>
+                            <option value="Views">Views</option>
+                            <option value="Suiting">Suiting</option>
+                            <option value="Footwear">Footwear</option>
+                        </select>
+                        <button type="submit" class="btn btn-success mt-2">View Products</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="/javascripts/adminDashboard.js"></script>

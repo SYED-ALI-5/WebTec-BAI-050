@@ -6,4 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector('.reg-btn')?.addEventListener('click', function () {
     window.location.href = '/register';
   });
+
+  document.querySelector('.adm-btn')?.addEventListener('click', function () {
+    window.location.href = '/loginadmin';
+  });
 });

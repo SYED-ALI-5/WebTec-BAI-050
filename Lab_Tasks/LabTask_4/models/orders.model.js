@@ -14,7 +14,8 @@ const orderSchema = new mongoose.Schema({
     type: Date,
     default: Date.now
   },
-  totalAmount: Number
+  totalAmount: Number,
+  status: String
 });
 
 module.exports = mongoose.model('Order', orderSchema);

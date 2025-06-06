@@ -26,7 +26,8 @@ router.post('/login', async (req, res) => {
         req.session.user = {
             id: user._id,
             name: user.name,
-            email: user.email
+            email: user.email,
+            isAdmin: user.isAdmin
         };
         return res.redirect('/');
 

@@ -1,0 +1,41 @@
+<div class="container my-5">
+    <div class="card shadow rounded">
+        <div class="card-body text-center">
+            <h3 class="card-title mb-4">Edit Footwear Item</h3>
+            <form action="/admin/footwear/edit/<%= footwear._id %>" method="POST">
+
+                <div class="mb-3 d-flex flex-column align-items-start">
+                    <label for="image1" class="form-label">Image</label>
+                    <input type="text" class="form-control" id="image1" name="image1" value="<%= footwear.image1 %>"
+                        required>
+                </div>
+
+                <div class="mb-3 d-flex flex-column align-items-start">
+                    <label for="image2" class="form-label">Hover Image</label>
+                    <input type="text" class="form-control" id="image2" name="image2" value="<%= footwear.image2 %>"
+                        required>
+                </div>
+
+                <div class="mb-3 d-flex flex-column align-items-start">
+                    <label for="desc" class="form-label">Description</label>
+                    <textarea class="form-control" id="desc" name="desc" rows="3"
+                        required><%= footwear.desc %></textarea>
+                </div>
+
+                <div class="mb-3 d-flex flex-column align-items-start">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="text" class="form-control" id="price" name="price" value="<%= footwear.price %>"
+                        required>
+                </div>
+
+                <div class="mb-3 d-flex flex-column align-items-start">
+                    <label for="sizes" class="form-label">Sizes</label>
+                    <input type="text" class="form-control" id="sizes" name="sizes" value="<%= footwear.sizes %>"
+                        required>
+                </div>
+
+                <button type="submit" class="btn btn-success">Update</button>
+            </form>
+        </div>
+    </div>
+</div>

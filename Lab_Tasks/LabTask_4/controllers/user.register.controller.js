@@ -14,7 +14,8 @@ router.post('/register', async (req, res) => {
     register.name = data.name;
     register.email = data.email;
     register.password = data.password;
-    
+    register.isAdmin = "user"
+
     await register.save();
     return res.redirect('/login');
 });

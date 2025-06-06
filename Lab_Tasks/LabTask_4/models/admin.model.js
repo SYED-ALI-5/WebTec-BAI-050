@@ -1,13 +1,14 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
-const usersSchema = new mongoose.Schema({
+const adminSchema = new mongoose.Schema({
   name: String,
   email: String,
   password: String,
+  isAdmin: String,
 });
 
-usersSchema.pre('save', async function (next) {
+adminSchema.pre('save', async function (next) {
   // Only hash if password is modified or new
   if (!this.isModified('password')) return next();
 
@@ -20,5 +21,5 @@ usersSchema.pre('save', async function (next) {
   }
 });
 
-const userModel = mongoose.model('Users', usersSchema);
-module.exports = userModel;
+const adminModel = mongoose.model('admin', adminSchema);
+module.exports = adminModel;

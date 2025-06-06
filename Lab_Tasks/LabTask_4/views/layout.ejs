@@ -28,53 +28,85 @@
         <div class="desktop-navbar">
             <navbar
                 class="d-flex flex-row align-items-center justify-content-between position-sticky top-0 pt-1 px-4 navbar">
-                <ul class="d-flex mb-0 p-0">
-                    <li class="list-unstyled"><a class="fw-semibold text-decoration-none text-black mx-2"
-                            href="">SHOP</a></li>
-                    <li class="list-unstyled"><a class="fw-semibold text-decoration-none text-black mx-2"
-                            href="">READ</a></li>
-                    <li class="list-unstyled"><a class="fw-semibold text-decoration-none text-black mx-2" href="">ABOUT
-                            US</a></li>
-                    <li class="list-unstyled"><a class="fw-semibold text-decoration-none text-black mx-2"
-                            href="">STORES</a></li>
-                </ul>
-                <div id="logo">
-                    <img class="my-2 mx-3" src="/images/Assets/Logo.svg" alt="Logo">
-                </div>
-                <ul class="items mb-0">
-                    <li class="d-flex flex-row">
+                <% if (!user || user.isAdmin !=='admin' ) { %>
+                    <ul class="d-flex mb-0 p-0">
+                        <li class="list-unstyled"><a href="/" class="fw-semibold text-decoration-none text-black mx-2"
+                                href="">HOME</a></li>
+                        <li class="list-unstyled"><a class="fw-semibold text-decoration-none text-black mx-2"
+                                href="">READ</a></li>
+                        <li class="list-unstyled"><a class="fw-semibold text-decoration-none text-black mx-2"
+                                href="">ABOUT
+                                US</a></li>
+                        <li class="list-unstyled"><a class="fw-semibold text-decoration-none text-black mx-2"
+                                href="">STORES</a></li>
+                    </ul>
+                    <% } %>
+                        <div id="logo">
+                            <img class="my-2 mx-3" src="/images/Assets/Logo.svg" alt="Logo">
+                        </div>
+                        <ul class="items mb-0">
+                            <li class="d-flex flex-row justify-content-around">
+                                <% if (!user || user.isAdmin !=='admin' ) { %>
+                                    <button class="border-0 bg-white d-flex flex-row align-items-center my-0 mx-2">
+                                        <span class="fw-semibold fs-8">SEARCH</span>
+                                        <img src="/images/Assets/magnifier.png" alt="">
+                                    </button>
+                                    <% } %>
 
-                        <button class="border-0 bg-white d-flex flex-row align-items-center my-0 mx-2">
-                            <span class="fw-semibold fs-8">SEARCH</span>
-                            <img src="/images/Assets/magnifier.png" alt="">
-                        </button>
+                                        <% if (user) { %>
 
-                        <% if (user) { %>
-                            <!-- Show logout button when logged in -->
-                            <form action="/logout" method="get">
-                                <button class="border-0 bg-white d-flex flex-row align-items-center my-0 mx-2">
-                                    <span class="fw-semibold fs-8">LOGOUT</span>
-                                    <img src="/images/Assets/lock.png" alt="">
-                                </button>
-                            </form>
-                            <button class="border-0 bg-white d-flex flex-row align-items-center my-0 mx-2">
-                                <a href="/checkout" class="text-decoration-none text-black">
-                                    <span class="fw-semibold fs-8">CART</span>
-                                </a>
-                                <img src="/images/Assets/lock.png" alt="">
-                            </button>
-                            <% } else { %>
-                                <!-- Show login/register -->
-                                <button
-                                    class="account-button border-0 bg-white d-flex flex-row align-items-center my-0 mx-2">
-                                    <a href="/accounts" class="text-decoration-none text-black">
-                                        <span class="fw-semibold fs-8">ACCOUNT</span>
-                                    </a>
-                                    <img src="/images/Assets/profile.png" alt="">
-                                </button>
-                                <% } %>
-                    </li>
-                </ul>
+                                            <% if (user.isAdmin==='admin' ) { %>
+                                                <!-- User-specific buttons -->
+                                                <button
+                                                    class="border-0 bg-white d-flex flex-row align-items-center my-0 mx-2">
+                                                    <a href="/admin/orders" class="text-decoration-none text-black">
+                                                        <span class="fw-semibold fs-8">Orders</span>
+                                                    </a>
+                                                    <img src="/images/Assets/orders.jpeg" alt="">
+                                                </button>
+                                                <% } %>
+
+                                                    <!-- Show logout button when logged in -->
+                                                    <form action="/logout" method="get">
+                                                        <button
+                                                            class="border-0 bg-white d-flex flex-row align-items-center my-0 mx-2">
+                                                            <span class="fw-semibold fs-8">Logout</span>
+                                                            <img src="/images/Assets/lock.png" alt="">
+                                                        </button>
+                                                    </form>
+
+                                                    <% if (user.isAdmin==='user' ) { %>
+                                                        <!-- User-specific buttons -->
+                                                        <button
+                                                            class="border-0 bg-white d-flex flex-row align-items-center my-0 mx-2">
+                                                            <a href="/checkout" class="text-decoration-none text-black">
+                                                                <span class="fw-semibold fs-8">CART</span>
+                                                            </a>
+                                                            <img src="/images/Assets/cart.jpg" alt="">
+                                                        </button>
+
+                                                        <button
+                                                            class="border-0 bg-white d-flex flex-row align-items-center my-0 mx-2">
+                                                            <a href="/orders" class="text-decoration-none text-black">
+                                                                <span class="fw-semibold fs-8">MyOrders</span>
+                                                            </a>
+                                                            <img src="/images/Assets/orders.jpeg" alt="">
+                                                        </button>
+                                                        <% } %>
+
+                                                            <% } else { %>
+                                                                <!-- Show login/register when not logged in -->
+                                                                <button
+                                                                    class="account-button border-0 bg-white d-flex flex-row align-items-center my-0 mx-2">
+                                                                    <a href="/accounts"
+                                                                        class="text-decoration-none text-black">
+                                                                        <span class="fw-semibold fs-8">ACCOUNT</span>
+                                                                    </a>
+                                                                    <img src="/images/Assets/profile.png" alt="">
+                                                                </button>
+                                                                <% } %>
+                            </li>
+                        </ul>
             </navbar>
         </div>
 
