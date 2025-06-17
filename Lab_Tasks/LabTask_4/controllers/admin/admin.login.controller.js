@@ -4,7 +4,7 @@ const router = express.Router();
 const Admin = require('../../models/admin.model');
 
 router.get('/loginadmin', (req, res) => {
-    res.render('admin/loginadmin');
+    res.render('admin/loginadmin', { error: null });
 });
 
 router.post('/loginadmin', async (req, res) => {
@@ -14,13 +14,13 @@ router.post('/loginadmin', async (req, res) => {
         const admin = await Admin.findOne({ email });
 
         if (!admin) {
-            return res.send('User not found');
+            return res.render('admin/loginadmin', { error: 'User not found' });
         }
 
         const isMatch = await bcrypt.compare(password, admin.password);
 
         if (!isMatch) {
-            return res.send('Incorrect password');
+            return res.render('admin/loginadmin', { error: 'Incorrect password' });
         }
 
         req.session.user = {

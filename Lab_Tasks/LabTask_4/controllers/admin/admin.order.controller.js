@@ -9,7 +9,7 @@ router.post("/placeOrder", async (req, res) => {
 
   const cart = req.session.cart || [];
   if (cart.length === 0) {
-    return res.send("Cart is empty.");
+    return res.render('checkoutform', { cart: req.session.cart, grandTotal: 0, error: "Cart is empty." });
   }
 
   const { phone, address, cardNumber, cvv, expiry, cod } = req.body;
@@ -33,10 +33,11 @@ router.post("/placeOrder", async (req, res) => {
   try {
     await newOrder.save();
     req.session.cart = [];
-    res.send("Order placed successfully!");
+    return res.render('checkoutform', { cart: req.session.cart, grandTotal: 0, error: "Order placed successfully!" });
   } catch (err) {
     console.error(err);
     res.status(500).send("Failed to place order.");
+    return res.render('checkoutform', { cart: req.session.cart, grandTotal: 0, error: "Failed to place order." });
   }
 });
 

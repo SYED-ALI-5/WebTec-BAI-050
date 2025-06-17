@@ -12,5 +12,8 @@
         </div>
 
         <button type="submit" class="btn btn-primary w-100">Login</button>
+        <% if (error !== null) { %>
+            <p class="text-center mt-3 text-danger"><%= error %></p>
+        <% } %>
     </form>
 </div>

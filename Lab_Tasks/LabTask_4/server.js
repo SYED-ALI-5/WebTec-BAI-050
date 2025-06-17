@@ -72,7 +72,7 @@ server.get("/checkout", (req, res) => {
       grandTotal += parseFloat(item.TotalPrice);
     }
 
-    res.render("checkoutform", { cart, grandTotal });
+    res.render("checkoutform", { cart, grandTotal, error: null });
   }
 });
 
