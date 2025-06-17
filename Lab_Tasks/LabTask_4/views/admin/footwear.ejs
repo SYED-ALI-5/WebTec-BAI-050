@@ -2,17 +2,15 @@
     <div class="card shadow rounded">
         <div class="card-body">
             <h3 class="card-title text-center mb-4">Add New Footwear</h3>
-            <form action="" method="post">
+            <form action="/admin/footwear" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="image1" class="form-label">Image</label>
-                    <input type="text" class="form-control" id="image1" name="image1"
-                    placeholder="/images/Assets/image1.jpg" required>
+                    <input type="file" class="form-control" id="image1" name="image1" required>
                 </div>
                 
                 <div class="mb-3">
-                    <label for="image2" class="form-label">Hower Image</label>
-                    <input type="text" class="form-control" id="image2" name="image2"
-                    placeholder="/images/Assets/image2.jpg" required>
+                    <label for="image2" class="form-label">Hover Image</label>
+                    <input type="file" class="form-control" id="image2" name="image2" required>
                 </div>
                 
                 <div class="mb-3">

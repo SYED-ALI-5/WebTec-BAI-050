@@ -2,15 +2,19 @@
     <div class="card shadow rounded">
         <div class="card-body">
             <h3 class="card-title mb-4 text-center">Edit Suiting Item</h3>
-            <form action="/admin/suiting/edit/<%= suiting._id %>" method="POST">
+            <form action="/admin/suiting/edit/<%= suiting._id %>" method="POST" enctype="multipart/form-data">
                 <h5 class="text-primary">Coat</h5>
                 <div class="mb-3">
                     <label class="form-label">Image</label>
-                    <input type="text" class="form-control" name="image1" value="<%= suiting.image1 %>" required>
+                    <img src="<%= suiting.image1 %>" alt="image" class="img-thumbnail mb-3" style="max-width: 200px;">
+                    <input type="file" class="form-control" name="image1">
+                    <small class="text-muted">Leave empty to keep existing image</small>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Hover Image</label>
-                    <input type="text" class="form-control" name="image2" value="<%= suiting.image2 %>" required>
+                    <img src="<%= suiting.image2 %>" alt="image" class="img-thumbnail mb-3" style="max-width: 200px;">
+                    <input type="file" class="form-control" name="image2">
+                    <small class="text-muted">Leave empty to keep existing image</small>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Description</label>
@@ -30,11 +34,13 @@
                 <h5 class="text-primary">Pant</h5>
                 <div class="mb-3">
                     <label class="form-label">Image</label>
-                    <input type="text" class="form-control" name="image3" value="<%= suiting.image3 %>" required>
+                    <img src="<%= suiting.image3 %>" alt="image" class="img-thumbnail mb-3" style="max-width: 200px;">
+                    <input type="file" class="form-control" name="image3">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Hover Image</label>
-                    <input type="text" class="form-control" name="image4" value="<%= suiting.image4 %>" required>
+                    <img src="<%= suiting.image4 %>" alt="image" class="img-thumbnail mb-3" style="max-width: 200px;">
+                    <input type="file" class="form-control" name="image4">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Description</label>

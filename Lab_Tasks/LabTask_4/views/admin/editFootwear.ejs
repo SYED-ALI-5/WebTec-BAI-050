@@ -2,18 +2,18 @@
     <div class="card shadow rounded">
         <div class="card-body text-center">
             <h3 class="card-title mb-4">Edit Footwear Item</h3>
-            <form action="/admin/footwear/edit/<%= footwear._id %>" method="POST">
+            <form action="/admin/footwear/edit/<%= footwear._id %>" method="POST" enctype="multipart/form-data">
 
                 <div class="mb-3 d-flex flex-column align-items-start">
                     <label for="image1" class="form-label">Image</label>
-                    <input type="text" class="form-control" id="image1" name="image1" value="<%= footwear.image1 %>"
-                        required>
+                    <img src="<%= footwear.image1 %>" alt="image1" class="img-thumbnail mb-3" style="max-width: 200px;">
+                    <input type="file" class="form-control" id="image1" name="image1">
                 </div>
 
                 <div class="mb-3 d-flex flex-column align-items-start">
                     <label for="image2" class="form-label">Hover Image</label>
-                    <input type="text" class="form-control" id="image2" name="image2" value="<%= footwear.image2 %>"
-                        required>
+                    <img src="<%= footwear.image2 %>" alt="image2" class="img-thumbnail mb-3" style="max-width: 200px;">
+                    <input type="file" class="form-control" id="image2" name="image2">
                 </div>
 
                 <div class="mb-3 d-flex flex-column align-items-start">

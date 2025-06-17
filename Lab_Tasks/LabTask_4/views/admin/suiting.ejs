@@ -2,18 +2,16 @@
     <div class="card shadow rounded">
         <div class="card-body">
             <h3 class="card-title text-center mb-4">Add New Suit</h3>
-            <form action="" method="post">
+            <form action="/admin/suiting" method="post" enctype="multipart/form-data">
                 <h3>Coat</h3>
                 <div class="mb-3">
                     <label for="image1" class="form-label">Image</label>
-                    <input type="text" class="form-control" id="image1" name="image1"
-                    placeholder="/images/Assets/image1.jpg" required>
+                    <input type="file" class="form-control" id="image1" name="image1" required>
                 </div>
                 
                 <div class="mb-3">
-                    <label for="image2" class="form-label">Hower Image</label>
-                    <input type="text" class="form-control" id="image2" name="image2"
-                    placeholder="/images/Assets/image2.jpg" required>
+                    <label for="image2" class="form-label">Hover Image</label>
+                    <input type="file" class="form-control" id="image2" name="image2" required>
                 </div>
                 
                 <div class="mb-3">
@@ -28,20 +26,18 @@
                 
                 <div class="mb-3">
                     <label for="size1" class="form-label">Size</label>
-                    <input type="text" class="form-control" id="size1" name="size1" required>
+                    <input type="text" class="form-control" id="sizes1" name="sizes1" required>
                 </div>
                 
                 <h3>Pent</h3>
                 <div class="mb-3">
                     <label for="image3" class="form-label">Image</label>
-                    <input type="text" class="form-control" id="image3" name="image3"
-                        placeholder="/images/Assets/image3.jpg">
+                    <input type="file" class="form-control" id="image3" name="image3" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="image4" class="form-label">Hower Image</label>
-                    <input type="text" class="form-control" id="image4" name="image4"
-                        placeholder="/images/Assets/image4.jpg">
+                    <label for="image4" class="form-label">Hover Image</label>
+                    <input type="file" class="form-control" id="image4" name="image4" required>
                 </div>
 
                 <div class="mb-3">
@@ -55,8 +51,8 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="size2" class="form-label">Size</label>
-                    <input type="text" class="form-control" id="size2" name="size2">
+                    <label for="sizes2" class="form-label">Size</label>
+                    <input type="text" class="form-control" id="sizes2" name="sizes2" required>
                 </div>
 
                 <div class="text-center">
