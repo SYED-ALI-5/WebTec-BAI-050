@@ -1,0 +1,76 @@
+<div class="container mt-5 text-black">
+    <h2 class="mb-4 text-center">All Suiting Items</h2>
+
+    <% if (suiting.length===0) { %>
+        <p class="text-center">No suiting items found.</p>
+        <% } else { %>
+            <div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+                <% suiting.forEach(item=> { %>
+                    <div class="col">
+                        <div class="card shadow-sm h-100">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-6">
+                                    <div class="my-2">
+                                        <img src="<%= item.image1 %>" class="orignal-image-list img-fluid rounded-start"
+                                            alt="Image 1" style="height: 300px; object-fit: cover;">
+                                        <img src="<%= item.image2 %>"
+                                            class="hover-image-list img-fluid rounded-start mt-2" alt="Image 2"
+                                            style="height: 300px; object-fit: cover;">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Coat</h5>
+                                        <p class="card-text">
+                                            <%= item.desc1 %>
+                                        </p>
+                                        <p><strong>Price:</strong>
+                                            <%= item.price1 %>
+                                        </p>
+                                        <p><strong>Sizes:</strong>
+                                            <%= item.sizes1 %>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-6">
+                                    <div class="my-2">
+                                        <img src="<%= item.image3 %>" class="orignal-image-list img-fluid rounded-start"
+                                            alt="Image 1" style="height: 300px; object-fit: cover;">
+                                        <img src="<%= item.image4 %>"
+                                            class="hover-image-list img-fluid rounded-start mt-2" alt="Image 2"
+                                            style="height: 300px; object-fit: cover;">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pant</h5>
+                                        <p class="card-text">
+                                            <%= item.desc2 %>
+                                        </p>
+                                        <p><strong>Price:</strong>
+                                            <%= item.price2 %>
+                                        </p>
+                                        <p><strong>Sizes:</strong>
+                                            <%= item.sizes2 %>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-around my-3">
+                                <a href="/admin/suiting/edit/<%= item._id %>"
+                                    class="btn btn-sm btn-warning text-white py-2"
+                                    style="height: 40px; width: 70px;">Edit</a>
+                                <form action="/admin/suiting/delete/<%= item._id %>" method="POST"
+                                    onsubmit="return confirm('Are you sure you want to delete this item?');">
+                                    <button type="submit" class="btn btn-sm bg-danger text-white m-0"
+                                        style="height: 40px; width: 70px;">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <% }); %>
+            </div>
+            <% } %>
+</div>

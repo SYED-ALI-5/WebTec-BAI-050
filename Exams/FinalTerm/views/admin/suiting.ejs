@@ -1,0 +1,64 @@
+<div class="container my-5">
+    <div class="card shadow rounded">
+        <div class="card-body">
+            <h3 class="card-title text-center mb-4">Add New Suit</h3>
+            <form action="/admin/suiting" method="post" enctype="multipart/form-data">
+                <h3>Coat</h3>
+                <div class="mb-3">
+                    <label for="image1" class="form-label">Image</label>
+                    <input type="file" class="form-control" id="image1" name="image1" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="image2" class="form-label">Hover Image</label>
+                    <input type="file" class="form-control" id="image2" name="image2" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="desc1" class="form-label">Description</label>
+                    <textarea class="form-control" id="desc1" name="desc1" rows="2" required></textarea>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="price1" class="form-label">Price</label>
+                    <input type="text" class="form-control" id="price1" name="price1" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="size1" class="form-label">Size</label>
+                    <input type="text" class="form-control" id="sizes1" name="sizes1" required>
+                </div>
+                
+                <h3>Pent</h3>
+                <div class="mb-3">
+                    <label for="image3" class="form-label">Image</label>
+                    <input type="file" class="form-control" id="image3" name="image3" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="image4" class="form-label">Hover Image</label>
+                    <input type="file" class="form-control" id="image4" name="image4" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="desc2" class="form-label">Description</label>
+                    <textarea class="form-control" id="desc2" name="desc2" rows="2"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="price2" class="form-label">Price</label>
+                    <input type="text" class="form-control" id="price2" name="price2">
+                </div>
+
+                <div class="mb-3">
+                    <label for="sizes2" class="form-label">Size</label>
+                    <input type="text" class="form-control" id="sizes2" name="sizes2" required>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success px-5">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

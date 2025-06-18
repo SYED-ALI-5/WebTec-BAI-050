@@ -1,0 +1,74 @@
+<div class="container my-3 text-black">
+  <h3 class="text-black text-center">All Orders</h3>
+
+  <% if (orders.length===0) { %>
+    <p>No one placed any orders yet.</p>
+    <% } else { %>
+      <% orders.forEach((order, index)=> { %>
+        <div class="border p-3 my-4">
+          <h5 class="text-primary">Order #<%= index + 1 %> - <%= order.orderDate.toDateString() %>
+          </h5>
+          <p><strong>Customer Name:</strong>
+            <%= order.userName %>
+          </p>
+          <p><strong>Customer Email:</strong>
+            <%= order.userEmail %>
+          </p>
+          <p><strong>Phone:</strong>
+            <%= order.phone %>
+          </p>
+          <p><strong>Address:</strong>
+            <%= order.address %>
+          </p>
+
+          <% if (order.cod) { %>
+            <p><strong>Payment Method:</strong> Cash on Delivery</p>
+            <% } else { %>
+              <p><strong>Card Number:</strong> order.cardNumber</p>
+              <p><strong>CVV:</strong> order.cvv</p>
+              <p><strong>Expiry:</strong> order.expiry</p>
+              <% } %>
+
+                <p><strong>Status:</strong>
+                  <%= order.status %>
+                </p>
+                <div class="mb-4">
+                  <form action="/admin/order/status/<%= order._id %>" method="POST" class="d-inline">
+                    <input type="hidden" name="status" value="On the way">
+                    <button type="submit" class="btn btn-warning btn-sm text-white">On the Way</button>
+                  </form>
+
+                  <form action="/admin/order/status/<%= order._id %>" method="POST" class="d-inline">
+                    <input type="hidden" name="status" value="Delivered">
+                    <button type="submit" class="btn btn-success btn-sm">Delivered</button>
+                  </form>
+                </div>
+
+                <p><strong>Total Amount:</strong> Rs.<%= order.totalAmount.toLocaleString(undefined,
+                    {minimumFractionDigits: 2}) %>
+                </p>
+
+                <% order.cartItems.forEach((item)=> { %>
+                  <div class="d-flex justify-content-around border p-2 my-2">
+                    <div>
+                      <img src="<%= item.data.image %>" alt="Item Image" class="img-thumbnail"
+                        style="width: 150px; height: 150px;">
+                    </div>
+                    <div>
+                      <strong>Item desc:</strong>
+                      <%= item.data.desc %><br>
+                        <strong>Size:</strong>
+                        <%= item.size %><br>
+                          <strong>Quantity:</strong>
+                          <%= item.quantity %><br>
+                            <strong>Single Item Price:</strong>
+                            Rs.<%= item.data.price %><br>
+                              <strong>Total Price:</strong>
+                              Rs.<%= item.TotalPrice %>
+                    </div>
+                  </div>
+                  <% }) %>
+        </div>
+        <% }) %>
+          <% } %>
+</div>
