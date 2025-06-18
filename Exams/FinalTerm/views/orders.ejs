@@ -7,6 +7,7 @@
     <% orders.forEach((order, index) => { %>
       <div class="border p-3 my-4">
         <h5 class="text-primary">Order #<%= index + 1 %> - <%= order.orderDate.toDateString() %></h5>
+        <p><strong>Order ID:</strong> <%= order._id %></p>
         <p><strong>Status:</strong> <%= order.status %></p>
         <p><strong>Phone:</strong> <%= order.phone %></p>
         <p><strong>Address:</strong> <%= order.address %></p>

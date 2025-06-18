@@ -32,6 +32,7 @@ server.use("/", require("./controllers/admin/admin.suiting.controller"));
 server.use("/", require("./controllers/admin/admin.footwear.controller"));
 server.use("/", require("./controllers/admin/admin.login.controller"));
 server.use("/", require("./controllers/admin/admin.order.controller"));
+server.use("/", require("./controllers/complains.controller"));
 // server.use("/", require("./controllers/admin/admin.register.controller"));
 
 server.get("/", async (req, res) => {

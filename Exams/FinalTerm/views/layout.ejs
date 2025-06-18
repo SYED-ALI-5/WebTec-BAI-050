@@ -60,8 +60,8 @@
                                             <% if (!user || user.isAdmin !=='admin' ) { %>
                                                 <button
                                                     class="border-0 bg-white d-flex flex-row align-items-center my-0 mx-2">
-                                                    <span class="fw-semibold fs-8">SEARCH</span>
-                                                    <img src="/images/Assets/magnifier.png" alt="">
+                                                    <a href="/contact" class="text-decoration-none text-black"> <span class="fw-semibold fs-8">Contact</span>
+                                                    </a>
                                                 </button>
                                                 <% } %>
 
@@ -74,6 +74,14 @@
                                                                 <a href="/admin/orders"
                                                                     class="text-decoration-none text-black">
                                                                     <span class="fw-semibold fs-8">Orders</span>
+                                                                </a>
+                                                                <img src="/images/Assets/orders.jpeg" alt="">
+                                                            </button>
+                                                            <button
+                                                                class="border-0 bg-white d-flex flex-row align-items-center my-0 mx-2">
+                                                                <a href="/admin/complaints"
+                                                                    class="text-decoration-none text-black">
+                                                                    <span class="fw-semibold fs-8">Complaints</span>
                                                                 </a>
                                                                 <img src="/images/Assets/orders.jpeg" alt="">
                                                             </button>

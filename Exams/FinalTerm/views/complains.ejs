@@ -1,0 +1,15 @@
+<div class="container text-black my-5">
+    <h2>My Complaints</h2>
+    <ul class="list-unstyled border p-3">
+        <% complaints.forEach(c=> { %>
+            <li class="my-5 p-3 border rounded">
+                <strong>Order:</strong>
+                <%= c.orderId %><br />
+                    <strong>Message:</strong>
+                    <%= c.message %><br />
+                        <strong>Time:</strong>
+                        <%= c.timestamp.toLocaleString() %>
+            </li>
+            <% }) %>
+    </ul>
+</div>
